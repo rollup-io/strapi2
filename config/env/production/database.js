@@ -1,5 +1,6 @@
 module.exports = ({ env }) => ({
   connection: {
+    debug: true,
     client: 'postgres',
     connection: {
       connectionString: env('DATABASE_URL'),
