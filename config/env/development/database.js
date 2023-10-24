@@ -1,5 +1,6 @@
 module.exports = ({ env }) => ({
   connection: {
+    debug: true,
     client: 'postgres',
     connection: {
       connectionString: env('DATABASE_URL'),
@@ -9,6 +10,7 @@ module.exports = ({ env }) => ({
       user: env('PGUSER', 'strapi'),
       password: env('PGPASSWORD', 'password'),
       ssl: env.bool(true),
+      schema: 'public',
     },
     pool: { min: 0 }
   }
